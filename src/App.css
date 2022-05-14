@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+.content-container{
+  @apply flex flex-col gap-[85px] bg-gray-900 w-[750px] h-[300px] mt-[75px] m-auto rounded-xl p-[20px];
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container{
+  @apply w-[100%] h-auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.process{
+  @apply flex gap-[10px];
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.process button{
+  @apply inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 focus:ring-slate-500;
 }
-
-.App-link {
-  color: #61dafb;
+.process svg{
+  @apply flex-none transition duration-500 transform;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head-container{
+ @apply flex justify-between items-center;
+}
+.head-container p{
+ @apply text-3xl sm:text-3xl text-white font-extrabold tracking-tight;
+}
+.body-container{
+  @apply w-[100%] h-auto flex justify-between items-center;
+}
+.card-item{
+  @apply flex items-center rounded-xl w-[200px] h-[90px] cursor-pointer text-white font-semibold p-[20px] bg-[#525f68] justify-between;
+  transition: 0.6s;
+}
+.card-item:hover{
+  transform: scale(1.1);
+}
+.card-item p{
+  @apply inline-flex items-center h-9 rounded-full text-sm whitespace-nowrap px-3 bg-white text-gray-900;
+}
+.head-partial-body{
+  @apply flex items-center;
+}
+.head-partial-body p{
+ @apply text-[16px] underline decoration-[#f59999] underline-offset-2;
+ 
+}
+.head-partial-body svg{
+  @apply ml-[10px] text-[#f59999];
 }
